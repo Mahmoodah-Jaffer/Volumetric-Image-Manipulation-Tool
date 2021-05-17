@@ -1,0 +1,26 @@
+All <imageBase> files (imageBase.data and raw files) need to be put into data folder
+
+
+Invoke Application:
+1) Call ./volimage <imageBase> [-d i j output_file_name] [-x i output_file_name] in folder
+2) Can use make run - But need to change arguments in the Makefile
+
+
+Makefile:
+make - compiles all files and creates executable volimage that can be run
+make run - runs volimage executable [need to specify arguments inside Makefile]
+make clean - removes executable and object files
+
+
+volimage.h:
+Methods used in volimage.cpp are declared, as well as the constructor & destructor. 
+Private members width, height and vector<unsigned char **> are also declared.
+
+
+volimage.cpp:
+The functionality for the methods used are defined in this file.
+
+
+driver.cpp:
+This file parses the command line to get the arguments that are needed to call the VolImage methods.
+It checks which operation is selected by the user and calls the appropriate functions.
